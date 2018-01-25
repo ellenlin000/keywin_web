@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css_img_hover/set1.css" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--scroll-->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.js"></script>  
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.4/waypoints.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/animate.css/3.1.0/animate.css">
+    
+    <style type="text/css">
+        .os-animation{
+            opacity: 0;
+        }  
+        .os-animation.animated{
+            opacity: 1;
+        }   
+    </style>
+  
+    <script type="text/javascript">//<![CDATA[ 
+        $(function(){
+            function onScrollInit( items, trigger ) {
+                items.each( function() {
+                var osElement = $(this),
+                    osAnimationClass = osElement.attr('data-os-animation'),
+                    osAnimationDelay = osElement.attr('data-os-animation-delay');
+                  
+                    osElement.css({
+                        '-webkit-animation-delay':  osAnimationDelay,
+                        '-moz-animation-delay':     osAnimationDelay,
+                        'animation-delay':          osAnimationDelay
+                    });
+                    var osTrigger = ( trigger ) ? trigger : osElement;
+                    
+                    osTrigger.waypoint(function() {
+                        osElement.addClass('animated').addClass(osAnimationClass);
+                        },{
+                            triggerOnce: true,
+                            offset: '90%'
+                    });
+                });
+            }
+            onScrollInit( $('.os-animation') );
+            onScrollInit( $('.staggered-animation'), $('.staggered-animation-container') );
+});//]]>  
+    </script>
+</head>
+
+<body>
+    <div class="navbar-fixed">
+        <nav class="nav-extended">
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo"><img src="svg/Logo.svg" width="180px" height="70px" style="position:relative;"></img>
+                </a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <!--Main item-->
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="index.html"><i class="material-icons">home</i></a></li>
+                    <li><a href="about.html">關於我們</a></li>
+                    <li><a class="dropdown-button" href="#product.html" data-activates="dropdown_product"> 設備硬體 <i class="material-icons right">expand_more</i></a></li>
+                    <li><a class="dropdown-button" href="#solution.html" data-activates="dropdown_solution"> 解決方案 <i class="material-icons right">expand_more</i></a></li>
+                    <li><a class="dropdown-button" href="#news.html" data-activates="dropdown_news"> 消息公布 <i class="material-icons right">expand_more</i></a></a>
+                    </li>
+                    <li><a class="dropdown-button" href="#support.html" data-activates="dropdown_support"> 技術支援 <i class="material-icons right">expand_more</i></a></a>
+                    </li>
+                    <li><a href="#contect.html">連絡我們</a></li>
+                    <!--DropDown sub item-->
+                    <ul id="dropdown_product" class="dropdown-content">
+                        <li><a href="http://www.keywin.com.tw/product01.asp">伺服器</a></li>
+                        <li><a href="#!">工作站</a></li>
+                        <li><a href="#!">網路設備</a></li>
+                        <li><a href="#!">儲存裝置</a></li>
+                    </ul>
+                    <ul id="dropdown_solution" class="dropdown-content">
+                        <li><a href="">高速雲端系統</a></li>
+                        <li><a href="#!">企業電腦系統</a></li>
+                        <li><a href="#!">雲端電腦系統</a></li>
+                        <li><a href="#!">辦公室資訊系統</a></li>
+                    </ul>
+                    <ul id="dropdown_news" class="dropdown-content">
+                        <li><a href="#!">業務消息</a></li>
+                        <li><a href="#!">產品消息</a></li>
+                    </ul>
+                    <ul id="dropdown_support" class="dropdown-content">
+                        <li><a href="#!">常見問題</a></li>
+                        <li><a href="#!">維修流程</a></li>
+                    </ul>
+                </ul>
+                <!--手機板-->
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="#index.html">回首頁</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#about.html">關於我們</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#product.html">設備硬體</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#solution.html">解決方案</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#news.html">消息公布</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#support.html">技術支援</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#contect.html">連絡我們</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div id="context">
+        <div class="row">
+            <div class="col s12 m9 l10">
+                <div id="section1" class="container section scrollspy">
+                    <div class="row">
+                        <div class="col s12 m5 l5">
+                            <h2>公司願景</h2>
+                            <i class="material-icons superlarge">business</i>
+                        </div>
+                        <div class="col s12 m7 l7">
+                            <div>
+                                <div style="margin-top:30px;margin-bottom:10px" class="left-side-gray-line">
+                                    <h5>企業願景</h5></div>
+                                <p style="padding-left: 20px">推動伺服器產業的成長與應用是凱穩電子永遠的動力；建立開放選擇環境，提供產品優質服務，客戶受益價格競爭是凱穩電子永遠的責任 </p>
+                            </div>
+                            <div>
+                                <div class="left-side-gray-line" style="margin-top:30px;margin-bottom:10px">
+                                    <h5>公司使命</h5></div>
+                                <p style="padding-left: 20px">快速、機動、彈性、有競爭力的伺服器專業服務</p>
+                                <div class="left-side-gray-line" style="margin-top:30px;margin-bottom:10px">
+                                    <h5>公司簡介</h5></div>
+                                <p style="padding-left: 20px">凱穩電子，為一專業提供各種伺服器與高速運算應用的供應與服務商，並以 Intel 、AMD的多核多處理器為核心發展的大/中/小型高效能伺服器、專業繪圖與影像工作站、陣列儲存設備，IPC 應用設備為產品中心。</p>
+                                <p style="padding-left: 20px">憑藉著對品質的堅持，及產品規劃的專業知識，對服務國內產業 IPC 設備應用發展，自動化應用與系統開發，高科技研發與學術研究單位，公私立大學以及中小企業所需的各種系統服務應用，都可提供有競爭力的產品設備，此外配合 IPC 設備產業需求，除提供客戶定期定量的量產需求外，亦提供有彈性小量多樣生產組裝，以快速高度彈性提供組裝服務，可配合滿足國內系統開發商少量多樣的產品需求，及各種客製化的應用 </p>
+                            </div>
+                            <div>
+                                <div class="left-side-gray-line" style="margin-top:30px;margin-bottom:10px">
+                                    <h5>服務項目</h5></div>
+                                <ul style="padding-left: 20px">
+                                    <li><i class="material-icons tiny">keyboard_arrow_right</i>TYAN泰安電腦系列產品代理銷售／服務</li>
+                                    <li><i class="material-icons tiny">keyboard_arrow_right</i>1U/2U/3U/4U/5U 機架式，Intel 多核多處理器，HPC/GPU/雲端/資料庫/中小型商業應用等各種伺服器</li>
+                                    <li><i class="material-icons tiny">keyboard_arrow_right</i>直立式或桌上型專業應用伺服器與專業工作站</li>
+                                    <li><i class="material-icons tiny">keyboard_arrow_right</i>IPC工業電腦客製化組裝、客製化機箱設計伺服器</li>
+                                    <li><i class="material-icons tiny">keyboard_arrow_right</i>電腦週邊、網路設備、伺服器機櫃、陣列儲存設備規劃</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <section class="os-animation" data-os-animation="fadeInLeft" data-os-animation-delay="0s">
+                                    <h1>This section will fade in from the left</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="section2" class="container section scrollspy">
+                    <div class="center">
+                        <div class="row">
+                            <div class="col s12 m7 l7">
+                                <p style="padding-left: 20px">優質伺服器解決方案的最佳代理商 凱穩電腦自 1997 年 6 月起代理 Tyan ， Chenbro ， Corsair ， Zippy… 等國際知名品牌之伺服器／工作站零組件的銷售，憑藉著優良組裝、設計研發能力的優勢，脫穎而出，為伺服器零組件原廠不可忽視的合作夥伴；更在訂單不斷流入下，生產規模大幅擴張，一舉躍登為泰安電腦亞洲優質代理商之一。展望未來，我們精益求精，持續提供高效能的伺服器、工作站、儲存設備，及電腦周邊產品，協助客戶在最彈性、經濟的預算內，完美建置資訊基礎建設。 </p>
+                                <p style="padding-left: 20px">• 主要產品 ‧ 伺服器系統 ‧ 工作站系統 ‧ 儲存系統 ‧ 主機板 ‧ 記憶體模組 ‧ 電源供應器 ‧ 機箱 ‧ CPU 散熱器</p>
+                            </div>
+                            <div class="col s12 m5 l5">
+                                <h1>主要產品</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="section3" class="section scrollspy">
+                    <div style="text-align:center">
+                        <div class="row">
+                            <div class="col s12 m5 l5">
+                                <h1>獨特競爭優勢</h1>
+                            </div>
+                            <div class="col s12 m7 l7">
+                                <p>與世界原廠並駕齊驅的工程技術 與 INTEL, ， AMD ， Tyan… 等國際知名供應商互動密切，以先進的技術作後盾，凱穩電子推出的產品能輕易地在尖端的平台上盡情發揮。 • 優質伺服器解決方案的最佳代理商 自 1997 年 6 月起代理 Tyan ， Chenbro ， Zippy… 等伺服器零組件，憑藉著優良組裝、設計研發能力的優勢，在各大原廠亞洲經銷商貢獻額中履履名列前矛。 • 一次購足的伺服器產品 提供從入門到高階全系列的的伺服器機型，儲存設備，及電腦周邊產品，讓客戶在最彈性、經濟的預算內，輕鬆建置資訊基礎建設。 • 全台首屈一指的彈性組裝之服務能量 為了提供更精確、迅速的服務，凱穩電子於 2004 年設立組裝生產線， 2006 年成立機箱製造部，依照客戶的需求，提供少量多樣、彈性組裝的客制化設計與製造服務。 • 彈性規劃產品的技術能力 自創業以來，凱穩電子持續不斷的投入產品研發，我們的工程設計團隊，已經研發成功許多 令人刮目相看的伺服器 機種。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="section4" class="section scrollspy">
+                    <div style="text-align:center">
+                        <div class="row">
+                            <div class="col s12 m7 l7">
+                                <p>提供「優質的產品」、「嚴謹的服務」、「彈性的組裝」與「專業的技術」，是我們對客戶永續服務的承諾；與客戶建立長遠良好的關係，以達到客戶最大的滿意是凱穩追求的目標；凱穩電子將以最快速及最誠懇的服務態度為您找到解決方案，並為客戶創造最大的利潤，更多商機請立即聯絡凱穩
+                                </p>
+                            </div>
+                            <div class="col s12 m5 l5">
+                                <h1>永續服務的承諾</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col hide-on-small-only m3 l2 ">
+                <ul class="section table-of-contents pinned">
+                    <li><a href="#section1">公司簡介</a></li>
+                    <li><a href="#section2">主要產品</a></li>
+                    <li><a href="#section3">獨特競爭優勢</a></li>
+                    <li><a href="#section4">永續服務的承諾</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--Footer-->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l4 m12 s12" style="margin-top: 40px; margin-bottom: 10px ">
+                    <div style="padding-left: 10px;border-left: 4px solid #555555">
+                        <h5>供應商的肯定</h5></div>
+                    <ul>
+                        <li>
+                            <div class="logo-container" style="margin-top: 10px">
+                                <img src="svg/Intel Pp2016_k_2s.svg" width="280px"></img>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="logo-container">
+                                <img src="svg/Dell_PartnerDirect_Preferred_201401.svg" width="280px"></img>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="logo-container " style="margin-bottom: 40px ">
+                                <img src="svg/VMW_09Q4_LGO_PARTNER_SOLUTION_PROVIDER_PRO.svg " width="180px "></img>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col l4 m12 s12 " style="margin-top: 40px; margin-bottom: 100px ">
+                    <div style="padding-left: 10px;border-left: 4px solid #555555 ">
+                        <h5>如何造訪我們?</h5></div>
+                    <div style="color: #555555;margin-left:10px ">
+                        <ul>
+                            <li><i class="material-icons blue-text ">phone_in_talk</i>886-2-8226-1888</li>
+                            <li><i class="material-icons blue-text ">print</i>886-2-8227-8941</li>
+                            <li><i class="material-icons blue-text ">room</i>新北市中和區中正路716號15F之1(遠東世紀廣場L棟)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col l2 m12 s12 " style="margin-top: 40px; margin-bottom: 100px ">
+                    <div style="padding-left: 10px;border-left: 4px solid #555555 ">
+                        <h5>相關連結</h5></div>
+                    <div style="color: #555555;margin-left: 15px ">
+                        <ul>
+                            <li><a style="color: #555555 " href="http://www.1111.com.tw/job-bank/company-description.asp?nNo=9591322 " target="_blank ">人才招募</a></li>
+                            <li><a style="color: #555555 " href="https://www.facebook.com/2015serverzhuji/?fref=ts " target="_blank "> 臉書粉絲團</a></li>
+                            <li>google分析</li>
+                            <li><a style="color: #555555 " href="mailto:keywin@keywin.com ">客服信箱</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col l2 m12 s12 " style="margin-top: 40px; margin-bottom: 100px ">
+                    <div style="padding-left: 10px;border-left: 4px solid #555555 ">
+                        <h5>語言轉換</h5></div>
+                    <div style="color: #555555 ; margin-left:15px ">
+                        <ul>
+                            <li><a style="color: #555555 " href="index.html " target="_blank ">繁體中文</a></li>
+                            <li><a style="color: #555555 " href="english.html " target="_blank "> English</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright ">
+            <div class="center " style="color: #555555 ">
+                © 2016 Copyright KeyWin
+            </div>
+        </div>
+        </div>
+    </footer>
+    </div>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript " src="https://code.jquery.com/jquery-2.1.1.min.js "></script>
+    <script type="text/javascript " src="materialize/js/materialize.min.js "></script>
+    <script type="text/javascript " src="materialize/js/jquery.orbit-1.2.3.min.js "></script>
+    <script type="text/javascript " src="materialize/js/scrollinit.js"></script>
+    <!--Initialization -->
+    <script>
+    $(document).ready(function() {
+        $('.scrollspy').scrollSpy();
+        $(".button-collapse ").sideNav();
+        $(".dropdown-button ").dropdown();
+        $('.slider').slider();
+        $(".hover ").mouseleave(
+            function() {
+                $(this).removeClass("hover ");
+            }
+        );
+
+        $(".active ").mouseleave(
+            function() {
+                $(this).removeClass("active ");
+            }
+        );
+        $('.parallax').parallax();
+
+        $('#featured').orbit();
+    });
+    </script>
+</body>
+
+</html>
